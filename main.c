@@ -70,4 +70,28 @@ drawLine(x2,y1,x2,y2);
 drawLine(x2,y2,x1,y2);
 drawLine(x1,y2,x1,y1);
 }
+void drawCircle(int cx,int cy,int radius)
+{
+    int x,y;
+for(y=0;y<HEIGHT;y++)
+{
+for(x=0;x<WIDTH;x++)
+{
+int dx=x-cx;
+int dy=y-cy;
+int distSq=dx*dx+dy*dy;
+int radiusSq=radius*radius;
+if(abs(distSq-radiusSq)<=radius)
+{
+setPixel(x,y);
+}
+}
+}
+}
+void drawTriangle(int x1,int y1,int x2,int y2,int x3,int y3)
+{
+    drawLine(x1,y1,x2,y2);
+drawLine(x2,y2,x3,y3);
+drawLine(x3,y3,x1,y1);
+}
     
