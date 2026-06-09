@@ -94,4 +94,36 @@ void drawTriangle(int x1,int y1,int x2,int y2,int x3,int y3)
 drawLine(x2,y2,x3,y3);
 drawLine(x3,y3,x1,y1);
 }
+int main()
+{
+    int choice;
+clearPicture();
+printf("2D graphics editor\n");
+printf("canvas size:%d x %d\n",WIDTH,HEIGHT);
+printf("use coordinates x y.\n");
+printf("x range:0 to %d\n",WIDTH-1);
+printf("y range 0 to %d\n",HEIGHT-1);
+whiile(1)
+    {
+printf("\nMenu\n");
+printf("1.Draw line\n");
+printf("2.Draw rectangle\n");
+printf("3.draw circle\n");
+printf("4.Draw triangle\n");
+printf("5.Display picture\n");
+printf("0.Exit\n");
+printf("Enter choice:");
+scanf("%d", &choice);
+if (choice==1)
+{
+int x1,y1,x2,y2;
+printf("enter x1 y1 x2 y2:");
+scanf("%d %d %d %d",&x1,&y1,&x2,&y2);
+drawLine(x1,y1,x2,y2);
+}
+else if(choice==2)
+{
+int x1,y1,x2,y2;
+printf("enter top-left xy and bottom-right xy:");
+scanf("%d %d %d d",&x1,&y1,&x2,&y2);
     
