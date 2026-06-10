@@ -5,7 +5,7 @@
 #define WIDTH 80
 #define HEIGHT 24
 
-#define EMPTY'_'
+#define EMPTY '_'
 #define PIXEL '*'
 
 char picture[HEIGHT][WIDTH];
@@ -36,7 +36,7 @@ printf("\n");
 }
 void setPixel(int x,int y)
 {
-    if(x>=0&&x<WIDTH&&y>=0&&y<HEIGHT)
+    if(x>=0 && x<WIDTH && y>=0 && y<HEIGHT)
 {
 picture[y][x]=PIXEL;
 }
@@ -59,7 +59,12 @@ int e2=2*err;
 if(e2>-dy)
 {
 err-=dy;
-x1+=sy;
+x1+=sx;
+}
+    if(e2<dx)
+    {
+        err+=dx;
+        y1+=sy;
 }
 }
 }
@@ -125,10 +130,11 @@ else if(choice==2)
 {
 int x1,y1,x2,y2;
 printf("enter top-left xy and bottom-right xy:");
-scanf("%d %d %d d",&x1,&y1,&x2,&y2);
+scanf("%d %d %d %d",&x1,&y1,&x2,&y2);
 drawRectangle(x1,y1,x2,y2);
 }
 else if(choice==3)
+{
     int cx,cy,radius;
 printf("enter center x y and radius:");
 scanf("%d %d %d",&cx,&cy,&radius);
@@ -139,7 +145,7 @@ else if(choice==4)
 int x1,y1,x2,y2,x3,y3;
 printf("enter x1,y1,x2,y2,x3,y3");
 scanf("%d %d %d %d",&x1,&y1,&x2,&y2,&x3,&y3);
-drawTraingle(x1,y1,x2,y2,x3,y3);
+drawTriangle(x1,y1,x2,y2,x3,y3);
 }
 else if(choice==5)
 {
