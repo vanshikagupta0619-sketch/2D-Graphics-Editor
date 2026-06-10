@@ -126,4 +126,37 @@ else if(choice==2)
 int x1,y1,x2,y2;
 printf("enter top-left xy and bottom-right xy:");
 scanf("%d %d %d d",&x1,&y1,&x2,&y2);
+drawRectangle(x1,y1,x2,y2);
+}
+else if(choice==3)
+    int cx,cy,radius;
+printf("enter center x y and radius:");
+scanf("%d %d %d",&cx,&cy,&radius);
+drawCircle(cx,cy,radius);
+}
+else if(choice==4)
+{
+int x1,y1,x2,y2,x3,y3;
+printf("enter x1,y1,x2,y2,x3,y3");
+scanf("%d %d %d %d",&x1,&y1,&x2,&y2,&x3,&y3);
+drawTraingle(x1,y1,x2,y2,x3,y3);
+}
+else if(choice==5)
+{
+printf("the picture is:\n");
+displayPicture();
+}
+else if(choice==0)
+{
+printf("exiting program.\n");
+break;
+}
+else
+{
+printf("invalid choice\n");
+}
+}
+return 0;
+}x
+    
     
