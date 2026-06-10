@@ -103,7 +103,7 @@ printf("canvas size:%d x %d\n",WIDTH,HEIGHT);
 printf("use coordinates x y.\n");
 printf("x range:0 to %d\n",WIDTH-1);
 printf("y range 0 to %d\n",HEIGHT-1);
-whiile(1)
+while(1)
     {
 printf("\nMenu\n");
 printf("1.Draw line\n");
@@ -157,6 +157,6 @@ printf("invalid choice\n");
 }
 }
 return 0;
-}x
+}
     
     
